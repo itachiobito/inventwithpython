@@ -7,8 +7,8 @@ Tags:short, game, puzzle"""
 
 import random
 
-NUM_DIGITS = 3 # (!)Try setting this to 1 or 10.
-MAX_GUESSES = 10 # (!) Try setting this to 1 or 100.
+NUM_DIGITS = 3  # (!)Try setting this to 1 or 10.
+MAX_GUESSES = 10  # (!) Try setting this to 1 or 100.
 
 
 def main():
@@ -19,13 +19,13 @@ I am thinking of a {}-digit number with no repeated digits.
 Try to guess what it is. Here are some clues:
 When I say:     That means:
     Pico       One digit is correct but in the wrong position.
-    Fermi       One digit is corrent and in the right position.
+    Fermi       One digit is current and in the right position.
     Bagels      No digit is correct.
 
 For example, if the secret number was  248 and your guess was 843, the
 clues would be Fermi Pico.'''.format(NUM_DIGITS))
 
-    while True: # Main game loop.
+    while True:  # Main game loop.
         # This stores the secret number the player needs to guess:
         secretNum = getSecretNum()
         print('I have a thought up a number.')
@@ -39,7 +39,7 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
                 print('Guess #{}:'.format(numGuesses))
                 guess = input('> ')
 
-            clues = getClues(guess,secretNum)
+            clues = getClues(guess, secretNum)
             print(clues)
             numGuesses += 1
 
@@ -58,8 +58,8 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
 
 def getSecretNum():
     """Returns a string made up of NUM_DIGITS unique random digits."""
-    numbers = list('0123456789') # Create a list of digits 0 to 9.
-    random.shuffle(numbers) # Shuffle them into a random order.
+    numbers = list('0123456789')  # Create a list of digits 0 to 9.
+    random.shuffle(numbers)  # Shuffle them into a random order.
 
     # Get the first NUM_DIGITS digits in the list for the secret number:
     secretNum = ''
@@ -84,7 +84,7 @@ def getClues(guess, secretNum):
             # A correct digit is in the incorrect place.
             clues.append('Pico')
     if len(clues) == 0:
-        return 'Bagels' # There are no correct digits at all.
+        return 'Bagels'  # There are no correct digits at all.
     else:
         # Sort the clues into alphabetical order so their original order
         # doesn't give information away.
@@ -93,10 +93,6 @@ def getClues(guess, secretNum):
         return ' '.join(clues)
 
 
- # If the program is run (instead of imported), tun the game:
- if __name__ == '__main__':
-     main()
-
-
-
-
+# If the program is run (instead of imported), run the game:
+if __name__ == '__main__':
+    main()
