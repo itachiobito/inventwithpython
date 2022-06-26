@@ -95,4 +95,8 @@ def getClues(guess, secretNum):
 
 # If the program is run (instead of imported), run the game:
 if __name__ == '__main__':
+    print('Hello World')
     main()
+elif __name__ != '__main__':
+    print('Wert von __name__ in project1.py:', __name__)
+
