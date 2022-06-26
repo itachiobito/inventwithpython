@@ -1,7 +1,7 @@
 
 """
 https://www.data-science-architect.de/__name____main__/
-In diesem Artikel wird die if Schleife mit der Systemvariablen name beschrieben
+In diesem Artikel wird die if Schleife am Ende der Datei projekt1.py mit der Systemvariablen name beschrieben
 """
 
 from project1 import getSecretNum
