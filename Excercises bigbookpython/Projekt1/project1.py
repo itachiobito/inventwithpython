@@ -94,7 +94,7 @@ def getClues(guess, secretNum):
 
 
 # If the program is run (instead of imported), run the game:
-if __name__ == '__main__':
+if __name__ == '__main__':  # __name__ ist eine Systemvariable
     print('Hello World')
     main()
 elif __name__ != '__main__':
